@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 import { NextResponse } from 'next/server';
-import { connect } from 'mongoose';
+import { connect } from '@/connectDB';
 
 export const GET = async () => {
   try {
