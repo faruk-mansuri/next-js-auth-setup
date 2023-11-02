@@ -13,9 +13,8 @@ const ProfilePage = () => {
   const logout = async () => {
     try {
       const response = await axios.get('/api/auth/logout');
-      console.log(response);
-      toast.success('Logout successfully');
       router.replace('/login');
+      toast.success('Logout successfully');
     } catch (error) {
       console.log(error);
       toast.error(error.meg);

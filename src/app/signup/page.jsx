@@ -30,8 +30,8 @@ const SignUp = () => {
     setIsLoading(true);
     try {
       const response = await axios.post('/api/auth/signup', formData);
-      toast.success(' Check your email(spam) to verify your account');
       router.push('/login');
+      toast.success(' Check your email(spam) to verify your account');
     } catch (error) {
       toast.error(error.response.data.msg);
     } finally {

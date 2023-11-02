@@ -44,11 +44,10 @@ const ResetPassword = () => {
         token,
         password: formData.confirmPassword,
       });
-      toast.success('Password changed successfully');
       router.push('/login');
+      toast.success('Password changed successfully');
     } catch (error) {
       toast.error(error.response.data.msg);
-      console.log(error.message);
     } finally {
       setIsLoading(false);
     }

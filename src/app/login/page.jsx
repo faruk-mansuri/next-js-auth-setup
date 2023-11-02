@@ -25,8 +25,8 @@ const Login = () => {
     setIsLoading(true);
     try {
       const response = await axios.post('/api/auth/login', formData);
-      toast.success('User logged in successfully');
       router.push('/');
+      toast.success('User logged in successfully');
     } catch (error) {
       toast.error(error.response.data.msg);
     } finally {
